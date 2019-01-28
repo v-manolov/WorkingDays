@@ -4,3 +4,4 @@ C:\Users\valio\source\repos\Chapter11\Solution9-WorkingDays\bin\Debug\Solution9-
 C:\Users\valio\source\repos\Chapter11\Solution9-WorkingDays\obj\Debug\Solution9-WorkingDays.csproj.CoreCompileInputs.cache
 C:\Users\valio\source\repos\Chapter11\Solution9-WorkingDays\obj\Debug\Solution9-WorkingDays.exe
 C:\Users\valio\source\repos\Chapter11\Solution9-WorkingDays\obj\Debug\Solution9-WorkingDays.pdb
+C:\Users\valio\source\repos\Chapter11\Solution9-WorkingDays\obj\Debug\Solution9-WorkingDays.csprojAssemblyReference.cache

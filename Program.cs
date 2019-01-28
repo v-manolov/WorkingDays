@@ -9,14 +9,27 @@ namespace Solution9_WorkingDays
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
+        {
+            EnterValidDate();
+        }
+        static void EnterValidDate()
         {
             DateTime currentDate = DateTime.Now.Date;
-            Console.WriteLine("Please enter a date after {0:dd.MM.yyyy} :",currentDate);
+            Console.WriteLine("Please enter a date after {0:dd.MM.yyyy} :", currentDate);
             DateTime nextDate = DateTime.Parse(Console.ReadLine());
-            Console.Write("The period from {0:dd.MM.yyyy} to {1:dd.MM.yyyy} has ",currentDate,nextDate);
-            Console.WriteLine("{0} working days.",WorkingDays.CountWorkingDays(currentDate,nextDate));
-            Console.ReadLine(); 
+            if ((nextDate - currentDate).Days >= 0)
+            {
+                Console.Write("The period from {0:dd.MM.yyyy} to {1:dd.MM.yyyy} has ", currentDate, nextDate);
+                Console.WriteLine("{0} working days.", WorkingDays.CountWorkingDays(currentDate, nextDate));
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("You have entered a date before {0:dd.MM.yyyy}",currentDate);
+                EnterValidDate();
+            }
         }
+
     }
 }
