@@ -25,24 +25,27 @@ namespace Solution9_WorkingDays
                     workingDays--;
                 }
                 today = today.AddDays(1);
+                int currentYear = today.Year;
             }
             return workingDays;
         }
-        static DateTime[] holidays = new DateTime[]
-            {
-                new DateTime(DateTime.Now.Year,01,01),
-                new DateTime(DateTime.Now.Year,03,03),
-                new DateTime(DateTime.Now.Year,04,28),
-                new DateTime(DateTime.Now.Year,05,01),
-                new DateTime(DateTime.Now.Year,05,06),
-                new DateTime(DateTime.Now.Year,05,24),
-                new DateTime(DateTime.Now.Year,09,06),
-                new DateTime(DateTime.Now.Year,12,24),
-                new DateTime(DateTime.Now.Year,12,25),
-                new DateTime(DateTime.Now.Year,12,26)
-            };
+
         static bool IsHoliday(DateTime today)
         {
+            int currentYear = today.Year;
+            DateTime[] holidays = new DateTime[]
+            {
+                new DateTime(currentYear,01,01),
+                new DateTime(currentYear,03,03),
+                new DateTime(currentYear,04,28),
+                new DateTime(currentYear,05,01),
+                new DateTime(currentYear,05,06),
+                new DateTime(currentYear,05,24),
+                new DateTime(currentYear,09,06),
+                new DateTime(currentYear,12,24),
+                new DateTime(currentYear,12,25),
+                new DateTime(currentYear,12,26)
+            };
             bool holiday = false;
             for (int i = 0; i < holidays.Length; i++)
             {
